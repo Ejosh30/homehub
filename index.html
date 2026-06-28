@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HomeHub Real Estate</title>
+<style>
+body{margin:0;font-family:Arial;background:#f5f7f5;color:#333}
+header{background:white;padding:20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px #ddd}
+.logo{font-size:30px;font-weight:bold;color:#2e7d32}
+button{background:#2e7d32;color:white;border:none;padding:12px 20px;border-radius:8px}
+.container{padding:20px}
+.search{background:white;padding:15px;border-radius:12px}
+input,select{padding:12px;width:90%;margin:8px;border-radius:8px;border:1px solid #ddd}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 3px 10px #ddd}
+.card img{width:100%;height:200px;object-fit:cover}
+.details{padding:15px}
+.price{color:#2e7d32;font-size:20px;font-weight:bold}
+.tag{background:#e8f5e9;padding:6px;border-radius:15px;color:#2e7d32}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">HomeHub</div>
+<button>List Property</button>
+</header>
+
+<div class="container">
+
+<div class="search">
+<h2>Find Property</h2>
+
+<select>
+<option>All States</option>
+<option>Enugu</option>
+<option>Lagos</option>
+<option>Abuja</option>
+<option>Rivers</option>
+</select>
+
+<input placeholder="Search house, land or apartment">
+</div>
+
+<h2>Properties For Sale</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<div class="details">
+<span class="tag">House</span>
+<h3>Luxury 4 Bedroom House</h3>
+<p>📍 Enugu State</p>
+<p class="price">₦45,000,000</p>
+<button>Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+<div class="details">
+<span class="tag">Land</span>
+<h3>Residential Land</h3>
+<p>📍 Abuja</p>
+<p class="price">₦15,000,000</p>
+<button>Buy Land</button>
+</div>
+</div>
+
+</div>
+
+<h2>Short-let Apartments</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+<div class="details">
+<span class="tag">Short-let</span>
+<h3>Modern Apartment</h3>
+<p>📍 Lagos State</p>
+<p class="price">₦80,000 / Night</p>
+<button>Book Now</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
