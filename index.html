@@ -1,93 +1,293 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<title>HomeHub Real Estate</title>
-<style>
-body{margin:0;font-family:Arial;background:#f5f7f5;color:#333}
-header{background:white;padding:20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px #ddd}
-.logo{font-size:30px;font-weight:bold;color:#2e7d32}
-button{background:#2e7d32;color:white;border:none;padding:12px 20px;border-radius:8px}
-.container{padding:20px}
-.search{background:white;padding:15px;border-radius:12px}
-input,select{padding:12px;width:90%;margin:8px;border-radius:8px;border:1px solid #ddd}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 3px 10px #ddd}
-.card img{width:100%;height:200px;object-fit:cover}
-.details{padding:15px}
-.price{color:#2e7d32;font-size:20px;font-weight:bold}
-.tag{background:#e8f5e9;padding:6px;border-radius:15px;color:#2e7d32}
-</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>HomeHub Real Estate</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.7">
+  <style type="text/css">
+    body {background-color: #f3f5f2}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 30.0px Arial; color: #266c26; -webkit-text-stroke: #266c26; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 30.0px Arial; color: #266c26; -webkit-text-stroke: #266c26; background-color: #ffffff; min-height: 34.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 30.0px 'Apple Color Emoji'; font-kerning: none}
+  </style>
 </head>
-
 <body>
-
-<header>
-<div class="logo">HomeHub</div>
-<button>List Property</button>
-</header>
-
-<div class="container">
-
-<div class="search">
-<h2>Find Property</h2>
-
-<select>
-<option>All States</option>
-<option>Enugu</option>
-<option>Lagos</option>
-<option>Abuja</option>
-<option>Rivers</option>
-</select>
-
-<input placeholder="Search house, land or apartment">
-</div>
-
-<h2>Properties For Sale</h2>
-
-<div class="cards">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-<div class="details">
-<span class="tag">House</span>
-<h3>Luxury 4 Bedroom House</h3>
-<p>📍 Enugu State</p>
-<p class="price">₦45,000,000</p>
-<button>Buy Now</button>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-<div class="details">
-<span class="tag">Land</span>
-<h3>Residential Land</h3>
-<p>📍 Abuja</p>
-<p class="price">₦15,000,000</p>
-<button>Buy Land</button>
-</div>
-</div>
-
-</div>
-
-<h2>Short-let Apartments</h2>
-
-<div class="cards">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
-<div class="details">
-<span class="tag">Short-let</span>
-<h3>Modern Apartment</h3>
-<p>📍 Lagos State</p>
-<p class="price">₦80,000 / Night</p>
-<button>Book Now</button>
-</div>
-</div>
-
-</div>
-
-</div>
-
+<p class="p1"><span class="s1"><b>&lt;!DOCTYPE html&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;html&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;head&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;title&gt;HomeHub&lt;/title&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;style&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>body{</b></span></p>
+<p class="p1"><span class="s1"><b>font-family: Arial, sans-serif;</b></span></p>
+<p class="p1"><span class="s1"><b>margin:0;</b></span></p>
+<p class="p1"><span class="s1"><b>background:#f4f4f4;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>header{</b></span></p>
+<p class="p1"><span class="s1"><b>background:white;</b></span></p>
+<p class="p1"><span class="s1"><b>padding:20px;</b></span></p>
+<p class="p1"><span class="s1"><b>text-align:center;</b></span></p>
+<p class="p1"><span class="s1"><b>box-shadow:0 2px 10px #ccc;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>h1{</b></span></p>
+<p class="p1"><span class="s1"><b>color:#222;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>.container{</b></span></p>
+<p class="p1"><span class="s1"><b>width:90%;</b></span></p>
+<p class="p1"><span class="s1"><b>max-width:900px;</b></span></p>
+<p class="p1"><span class="s1"><b>margin:30px auto;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>.card{</b></span></p>
+<p class="p1"><span class="s1"><b>background:white;</b></span></p>
+<p class="p1"><span class="s1"><b>padding:25px;</b></span></p>
+<p class="p1"><span class="s1"><b>margin-bottom:25px;</b></span></p>
+<p class="p1"><span class="s1"><b>border-radius:15px;</b></span></p>
+<p class="p1"><span class="s1"><b>box-shadow:0 4px 12px #ddd;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>input,select,textarea,button{</b></span></p>
+<p class="p1"><span class="s1"><b>width:100%;</b></span></p>
+<p class="p1"><span class="s1"><b>padding:12px;</b></span></p>
+<p class="p1"><span class="s1"><b>margin:10px 0;</b></span></p>
+<p class="p1"><span class="s1"><b>border-radius:8px;</b></span></p>
+<p class="p1"><span class="s1"><b>border:1px solid #ccc;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>button{</b></span></p>
+<p class="p1"><span class="s1"><b>background:#222;</b></span></p>
+<p class="p1"><span class="s1"><b>color:white;</b></span></p>
+<p class="p1"><span class="s1"><b>cursor:pointer;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>.property{</b></span></p>
+<p class="p1"><span class="s1"><b>background:#eee;</b></span></p>
+<p class="p1"><span class="s1"><b>padding:15px;</b></span></p>
+<p class="p1"><span class="s1"><b>margin:15px 0;</b></span></p>
+<p class="p1"><span class="s1"><b>border-radius:10px;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>img{</b></span></p>
+<p class="p1"><span class="s1"><b>width:100%;</b></span></p>
+<p class="p1"><span class="s1"><b>border-radius:10px;</b></span></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/style&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/head&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;body&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;header&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;h1&gt;</b></span><span class="s2">🏠</span><span class="s1"><b> HomeHub&lt;/h1&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;p&gt;Buy • Sell • Short-let Apartments&lt;/p&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/header&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;div class="container"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;div class="card"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;h2&gt;</b></span><span class="s2">🏡</span><span class="s1"><b> Landlord: List Property&lt;/h2&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;input id="title" placeholder="Property name"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;select id="type"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;House for Sale&lt;/option&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Land for Sale&lt;/option&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Short-let Apartment&lt;/option&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/select&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;select id="state"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Enugu&lt;/option&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Lagos&lt;/option&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Abuja&lt;/option&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Rivers&lt;/option&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Delta&lt;/option&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Anambra&lt;/option&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;option&gt;Other&lt;/option&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/select&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;input id="location" placeholder="Location"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;input id="price" placeholder="Price"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;textarea id="description" placeholder="Describe the property"&gt;&lt;/textarea&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;input id="image" placeholder="Paste image link"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;button onclick="addProperty()"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>Publish Property</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/button&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;div class="card"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;h2&gt;Available Properties&lt;/h2&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;div id="listings"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>Loading properties...</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;script&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>async function addProperty(){</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>const property={</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>title:document.getElementById("title").value,</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>type:document.getElementById("type").value,</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>state:document.getElementById("state").value,</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>location:document.getElementById("location").value,</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>price:document.getElementById("price").value,</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>description:document.getElementById("description").value,</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>image:document.getElementById("image").value</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>};</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>await fetch("/api/properties",{</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>method:"POST",</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>headers:{</b></span></p>
+<p class="p1"><span class="s1"><b>"Content-Type":"application/json"</b></span></p>
+<p class="p1"><span class="s1"><b>},</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>body:JSON.stringify(property)</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>});</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>alert("Property listed successfully");</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>loadProperties();</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>async function loadProperties(){</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>const response = await fetch("/api/properties");</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>const data = await response.json();</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>let html="";</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>data.forEach(p=&gt;{</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>html += `</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;div class="property"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;img src="${p.image}"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;h3&gt;${p.title}&lt;/h3&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;p&gt;Type: ${p.type}&lt;/p&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;p&gt;</b></span><span class="s2">📍</span><span class="s1"><b> ${p.state}, ${p.location}&lt;/p&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;p&gt;</b></span><span class="s2">💰</span><span class="s1"><b> ${p.price}&lt;/p&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;p&gt;${p.description}&lt;/p&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>`;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>});</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>document.getElementById("listings").innerHTML = html;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>loadProperties();</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/script&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b>&lt;/body&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;/html&gt;</b></span></p>
 </body>
 </html>
