@@ -1,15 +1,61 @@
 const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
 
-app.use(express.static(__dirname));
+app.use(cors());
+app.use(express.json());
 
-app.get("/", (req,res)=>{
- res.sendFile(__dirname + "/index.html");
+
+// database
+mongoose.connect(process.env.MONGO_URL)
+.then(()=>{
+console.log("Database connected");
+})
+.catch(err=>{
+console.log(err);
 });
 
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, ()=>{
- console.log("HomeHub running");
+// test route
+app.get("/api", (req,res)=>{
+res.json({
+message:"HomeHub backend working"
+});
+});
+
+
+// properties
+let properties=[];
+
+
+app.post("/api/properties",(req,res)=>{
+
+const property=req.body;
+
+properties.push(property);
+
+res.json({
+message:"Property added",
+property
+});
+
+});
+
+
+
+app.get("/api/properties",(req,res)=>{
+
+res.json(properties);
+
+});
+
+
+
+const PORT=process.env.PORT || 3000;
+
+
+app.listen(PORT,()=>{
+console.log("HomeHub server running");
 });
