@@ -1,61 +1,71 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
+// Show your website
+app.use(express.static(path.join(__dirname)));
 
-// database
-mongoose.connect(process.env.MONGO_URL)
-.then(()=>{
-console.log("Database connected");
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+
+// MongoDB connection
+mongoose.connect(process.env.MONGO_URI)
+.then(() => {
+  console.log("MongoDB connected");
 })
-.catch(err=>{
-console.log(err);
+.catch((err) => {
+  console.log("MongoDB error:", err.message);
 });
 
 
-// test route
-app.get("/api", (req,res)=>{
-res.json({
-message:"HomeHub backend working"
-});
-});
-
-
-// properties
-let properties=[];
-
-
-app.post("/api/properties",(req,res)=>{
-
-const property=req.body;
-
-properties.push(property);
-
-res.json({
-message:"Property added",
-property
-});
-
+// Test route
+app.get("/api", (req, res) => {
+  res.json({
+    message: "HomeHub backend is working"
+  });
 });
 
 
+// Temporary property storage
+let properties = [];
 
-app.get("/api/properties",(req,res)=>{
 
-res.json(properties);
+// Add property
+app.post("/api/properties", (req, res) => {
+
+  const property = {
+    id: Date.now(),
+    ...req.body
+  };
+
+  properties.push(property);
+
+  res.json({
+    message: "Property added",
+    property
+  });
 
 });
 
 
+// Get properties
+app.get("/api/properties", (req,res)=>{
 
-const PORT=process.env.PORT || 3000;
+  res.json(properties);
+
+});
 
 
-app.listen(PORT,()=>{
-console.log("HomeHub server running");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("HomeHub server running");
 });
