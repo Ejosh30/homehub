@@ -9,18 +9,21 @@ app.use(cors());
 app.use(express.json());
 
 
-// serve index.html correctly
+// serve index.html properly
 app.use(express.static(__dirname));
 
 
-// MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
-.then(() => {
+const mongoURI = process.env.MONGO_URI;
+
+
+mongoose.connect(mongoURI)
+.then(()=>{
     console.log("MongoDB connected");
 })
-.catch((error) => {
-    console.log("MongoDB error:", error.message);
+.catch((err)=>{
+    console.log("MongoDB error:", err.message);
 });
+
 
 
 // Property database
@@ -37,16 +40,20 @@ const Property = mongoose.model("Property", {
 });
 
 
-// Home page
+
+// Homepage
 app.get("/", (req,res)=>{
+
     res.sendFile(path.join(__dirname,"index.html"));
+
 });
+
 
 
 // Add property
 app.post("/api/properties", async(req,res)=>{
 
-    try {
+    try{
 
         const property = await Property.create(req.body);
 
@@ -55,7 +62,7 @@ app.post("/api/properties", async(req,res)=>{
             property
         });
 
-    } catch(error){
+    }catch(error){
 
         res.status(500).json({
             error:error.message
@@ -66,21 +73,33 @@ app.post("/api/properties", async(req,res)=>{
 });
 
 
+
 // Get properties
 app.get("/api/properties", async(req,res)=>{
 
-    const properties = await Property.find();
+    try{
 
-    res.json(properties);
+        const properties = await Property.find();
+
+        res.json(properties);
+
+    }catch(error){
+
+        res.status(500).json({
+            error:error.message
+        });
+
+    }
 
 });
 
 
 
-// Start server
+
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, ()=>{
+
+app.listen(PORT,()=>{
 
     console.log("HomeHub server running");
 
