@@ -8,55 +8,80 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname)));
 
+// serve index.html correctly
+app.use(express.static(__dirname));
+
+
+// MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
-.then(()=>{
-console.log("MongoDB connected");
+.then(() => {
+    console.log("MongoDB connected");
 })
-.catch(err=>{
-console.log(err);
+.catch((error) => {
+    console.log("MongoDB error:", error.message);
 });
 
 
+// Property database
 const Property = mongoose.model("Property", {
 
-title:String,
-type:String,
-state:String,
-location:String,
-price:String,
-description:String,
-image:String
+    title: String,
+    type: String,
+    state: String,
+    location: String,
+    price: String,
+    description: String,
+    image: String
 
 });
 
 
-app.get("/",(req,res)=>{
-res.sendFile(path.join(__dirname,"index.html"));
+// Home page
+app.get("/", (req,res)=>{
+    res.sendFile(path.join(__dirname,"index.html"));
 });
 
 
+// Add property
 app.post("/api/properties", async(req,res)=>{
 
-const property = await Property.create(req.body);
+    try {
 
-res.json(property);
+        const property = await Property.create(req.body);
+
+        res.json({
+            success:true,
+            property
+        });
+
+    } catch(error){
+
+        res.status(500).json({
+            error:error.message
+        });
+
+    }
 
 });
 
 
+// Get properties
 app.get("/api/properties", async(req,res)=>{
 
-const properties = await Property.find();
+    const properties = await Property.find();
 
-res.json(properties);
+    res.json(properties);
 
 });
 
 
+
+// Start server
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT,()=>{
-console.log("HomeHub server running");
+app.listen(PORT, ()=>{
+
+    console.log("HomeHub server running");
+
 });
